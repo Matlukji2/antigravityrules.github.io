@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Rules</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+            background: #8B7AB8;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 40px 20px;
+        }
+
+        /* Grid Background */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 28px;
+            padding: 64px 56px;
+            max-width: 680px;
+            width: 100%;
+            box-shadow: 
+                0 0 0 0.5px rgba(0, 0, 0, 0.04),
+                0 20px 60px rgba(0, 0, 0, 0.15),
+                0 40px 100px rgba(139, 122, 184, 0.2);
+            backdrop-filter: blur(40px);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .logo img {
+            max-width: 180px;
+            height: auto;
+            border-radius: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1d1d1f;
+            font-size: 40px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #86868b;
+            font-size: 17px;
+            font-weight: 400;
+            margin-bottom: 48px;
+            letter-spacing: -0.2px;
+        }
+
+        .rules-list {
+            list-style: none;
+        }
+
+        .rules-list li {
+            margin-bottom: 12px;
+            padding: 18px 20px;
+            background: #f5f5f7;
+            border-radius: 14px;
+            position: relative;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .rules-list li:hover {
+            background: #ebebed;
+            transform: scale(1.01);
+        }
+
+        .rules-list li:active {
+            transform: scale(0.99);
+        }
+
+        .rule-number {
+            flex-shrink: 0;
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #9b87c4 0%, #8B7AB8 100%);
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .rule-text {
+            color: #1d1d1f;
+            font-size: 16px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 48px 32px;
+                border-radius: 24px;
+            }
+
+            h1 {
+                font-size: 32px;
+            }
+
+            .subtitle {
+                font-size: 15px;
+                margin-bottom: 36px;
+            }
+
+            .rule-text {
+                font-size: 15px;
+            }
+
+            .logo img {
+                max-width: 140px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .container {
+                padding: 36px 24px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://files.catbox.moe/22shik.png" alt="Logo">
+        </div>
+        
+        <h1>Rules</h1>
+        <p class="subtitle">Keep our community safe and respectful</p>
+        
+        <ul class="rules-list">
+            <li>
+                <div class="rule-number">1</div>
+                <div class="rule-text">Don't be toxic, always be respective to other members of the community.</div>
+            </li>
+            <li>
+                <div class="rule-number">2</div>
+                <div class="rule-text">Don't post leaked/malicious resources.</div>
+            </li>
+            <li>
+                <div class="rule-number">3</div>
+                <div class="rule-text">Don't spam or post NSFW content.</div>
+            </li>
+            <li>
+                <div class="rule-number">4</div>
+                <div class="rule-text">Follow Discord TOS.</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
